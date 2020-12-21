@@ -134,7 +134,7 @@
 
                 <!--formulaire-->
                 <div id = "formulaire">
-                    <form action = "recherch.php" method = "POST">
+                    <form action = "food-test.php" method = "POST">
                         <fieldset>
                             <label for = "nom-parent">Nom du parent <sup>*</sup></label><br>
                             <input name = "nomParent" id = "nom-parent" placeholder = "Mehran Nazemi" value="<?php echo $nomParent?>" />

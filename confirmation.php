@@ -19,25 +19,11 @@
                 <table class="center">
                     <tr>
                         <th>Nom du Prent</th>
-                        <th>Nom de l'enfant</th>
-                        <th>Nom de l'école</th>
-                        <th>Age d'enfant</th>
-                        <th>Repas du Lundi</th>
-                        <th>Repas du Mardi</th>
-                        <th>Repas du Mercredi</th>
-                        <th>Repas du Jeudi</th>
-                        <th>Repas du Vendredi</th>
                     </tr>
                     <tr>
-                        <td><?php echo $_GET["np"]?></td>
-                        <td><?php echo $_GET["ne"]?></td>
-                        <td><?php echo $_GET["ecole"]?></td>
-                        <td><?php echo $_GET["age"]?></td>
-                        <td><?php echo $_GET["l"]?></td>
-                        <td><?php echo $_GET["ma"]?></td>
-                        <td><?php echo $_GET["mer"]?></td>
-                        <td><?php echo $_GET["j"]?></td>
-                        <td><?php echo $_GET["v"]?></td>
+<!--                        <td>--><?php //echo $_GET["np"]?><!--</td>-->
+                        <td><?php echo "Mehran"?></td>
+
                     </tr>
                 </table>
 				<?php

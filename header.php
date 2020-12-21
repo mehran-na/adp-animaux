@@ -40,8 +40,11 @@
                     <nav>
                         <ul>
                             <li><a href = "index.php">Accueil</a></li>
-                            <li><a href = "recherch.php">Recherch</a>
                             <li><a href = "formulaire.php">Formulaire</a>
+                            <li><a href = "rechercheResultat.php">Recherch Resultat</a>
+                            <li><a href = "animal.php">Animal info</a>
+                            <li><a href = "confirmation.php">Confirmation</a>
+
                             <li>
                         </ul>
                     </nav>

@@ -2,7 +2,6 @@
 		<nav>
 			<ul>
 				<li><a href='index.php'>Accueil</a></li>
-				<li><a href='recherch.php'>Recherche</a></li>
 				<li><a href='formulaire.php'>Formulaire</a></li>
 
 			</ul>
