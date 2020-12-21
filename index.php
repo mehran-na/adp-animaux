@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang = "fr">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width , inicial-scale=1">
-        <meta name = "keywords" content = "sport,football,hocky,montreal, impact, nouvelles,français">
-        <title>Mehran Info</title>
-        <link href = 'http://fonts.googleapis.com/css?family=Open+Sans' rel = 'stylesheet' type = 'text/css'>
-        <link rel = "stylesheet" href = "Styles/reset.css">
-        <link rel = "stylesheet" href = "Styles/pages.css">
-    </head>
-    <body>
-        <div id = "main">
-            <!--Header-->
+ <!--Header-->
 			<?php include 'header.php' ?>
 
             <!--body de la page-->

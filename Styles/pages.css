@@ -62,35 +62,9 @@ img{
 .logo img{
 	width: 250px;
 	height: 80px;
-	margin-left: 350px;
+	margin-left: 25px;
 	margin-top: 20px;
 	background-color: #fff;
-}
-
-.search{
-	position: absolute;
-	background-color: #000000;
-	top:50px;
-	left:10px;
-}
-
-.search input{
-	width: 150px;
-	height: 35px;
-	border: 0;	
-	color: #e6e6e6;
-	background-color: #000000;
-	border-right: 1px solid #fff;
-	font-size:20px;
-	font-family: times;
-	padding-right: 10px;
-}
-
-.search .search-btn{
-	float: right;
-	width: 35px;
-	height: 37px;
-	background: url('../Images/SearchBtn.png') no-repeat center center #ed1c24
 }
 
 .top-menu{
@@ -133,26 +107,20 @@ img{
 	position: absolute;
 	top: 27px;
 	right: 90px;
+	left: 622px;
 }
 
-.form1 .username , .form1 .password{
-	display: block;
-	width: 172px;
-	height: 20px;
-	padding-right: 1px;
-	margin-top: 10px;
-	font-family: times;
-	font-size: 20px;
-	color: #757a74;
-	padding-top: 5px;
-	text-align: center;
+.form1 #cherche{
+	width: 250px;
+	margin-top: 29px;
+	height: 30px;
 }
 
-.form1 .register{
+.form1 .chercheBtn{
 	position: absolute;
-	left: 180px;
+	/*left: 180px;*/
 	top: 12px;
-	width: 75px;
+	width: 92px;
 	height: 42px;
 	background: #c23636;
 	border: 0;

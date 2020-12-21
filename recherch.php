@@ -127,27 +127,14 @@
 	}
 ?>
 
-
-<!DOCTYPE html>
-<html lang = "fr">
-    <head>
-        <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width , inicial-scale=1">
-        <title>Mehran Info</title>
-        <link href = 'http://fonts.googleapis.com/css?family=Open+Sans' rel = 'stylesheet' type = 'text/css'>
-        <link rel = "stylesheet" href = "Styles/reset.css">
-        <link rel = "stylesheet" href = "Styles/pages.css">
-    </head>
-    <body>
-        <div id = "main">
-            <!--header-->
+<!--header-->
 			<?php include 'header.php' ?>
             <div class = "page">
 
 
                 <!--formulaire-->
                 <div id = "formulaire">
-                    <form action = "repas.php" method = "POST">
+                    <form action = "recherch.php" method = "POST">
                         <fieldset>
                             <label for = "nom-parent">Nom du parent <sup>*</sup></label><br>
                             <input name = "nomParent" id = "nom-parent" placeholder = "Mehran Nazemi" value="<?php echo $nomParent?>" />
