@@ -1,0 +1,404 @@
+/*styles de autres pages*/
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: linear-gradient(to bottom, rgba(30, 87, 153, 1) 0%, rgba(125, 185, 232, 0) 100%);
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	color:#cd2122;
+}
+
+sup{
+	color: #f00;
+}
+
+.clear{
+	clear:both;
+}
+
+h1,h2,h3,h4,h5{
+	font-family: Times;
+}
+
+p, h2{
+	margin-bottom: 1.5em;
+}
+
+img{
+	border: 0;
+	max-width: 100%
+}
+
+/*main styles*/
+#main{
+	width: 980px;
+	margin: 0 auto;
+	background: #fff;
+	box-shadow: -2px -2px 20px #ccc;
+}
+
+.top-bar{
+	background-color: #47a676;
+	height: 120px;
+	position: relative;
+}
+
+.socials ul{
+	margin-right: 40px;
+}
+
+.socials img{
+	height: 40px;
+	width:40px;
+	float: right;
+	margin-left: 10px;
+	padding: 40px 0 0 2px;
+}
+
+.logo img{
+	width: 250px;
+	height: 80px;
+	margin-left: 350px;
+	margin-top: 20px;
+	background-color: #fff;
+}
+
+.search{
+	position: absolute;
+	background-color: #000000;
+	top:50px;
+	left:10px;
+}
+
+.search input{
+	width: 150px;
+	height: 35px;
+	border: 0;	
+	color: #e6e6e6;
+	background-color: #000000;
+	border-right: 1px solid #fff;
+	font-size:20px;
+	font-family: times;
+	padding-right: 10px;
+}
+
+.search .search-btn{
+	float: right;
+	width: 35px;
+	height: 37px;
+	background: url('../Images/SearchBtn.png') no-repeat center center #ed1c24
+}
+
+.top-menu{
+	height: 120px;
+	background-color: #f4b757;
+	position: relative;
+}
+
+.top-menu ul{
+	margin-left: 10px
+}
+
+.top-menu ul li{
+	list-style: none;
+	display: block;
+	float: left;
+	height: 120px;
+	margin-right: 10px;
+}
+
+.top-menu ul li a{
+	color: #fff;
+	font-family: times;
+	font-size: 20px;
+	display: block;
+	height: 67px;
+	padding-top: 53px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.top-menu ul li :hover{
+	background-color: #ebebeb;
+	color: #47b53c;
+	border-top: 5px solid #7c2206;
+	height:62px;
+}
+
+.form1{
+	position: absolute;
+	top: 27px;
+	right: 90px;
+}
+
+.form1 .username , .form1 .password{
+	display: block;
+	width: 172px;
+	height: 20px;
+	padding-right: 1px;
+	margin-top: 10px;
+	font-family: times;
+	font-size: 20px;
+	color: #757a74;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.form1 .register{
+	position: absolute;
+	left: 180px;
+	top: 12px;
+	width: 75px;
+	height: 42px;
+	background: #c23636;
+	border: 0;
+	color: #31fd02;
+	font-size:24px;
+	font-family: Times;
+	border-radius: 15px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.page{
+	
+	width: 980px;
+	margin: 0 auto 0;
+}
+
+.page .post{
+	/* width: 80%; */
+	height: 100%;
+	background-color: #d6d3db;
+	float: left;
+}
+
+.page .post h1{
+	font-weight: bold;
+	font-size: 20pt;
+	line-height: 50px;
+	margin-left: 10px;
+}
+
+.page .post h2, h3{
+	font-weight: bold;
+	line-height: 35px;
+	margin-left: 10px;
+	margin-right: 15px;
+}
+
+.page .post p{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.page .post ul{
+	text-indent: 10px;
+	list-style-type: circle;
+	margin-left: 25px;
+}
+
+.page .post a{
+	color: blue;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+#video{
+	width: 100%;
+}
+
+.img-principal{
+	width: 100%;
+	height: 700px;
+}
+
+/*footer*/
+footer{
+	height: 100px;
+	text-align: center;
+	background-color: #f8f400;
+	clear: both;
+}
+
+footer ul {
+	text-align: center;
+	display: inline-block;
+	margin-top: 20px;
+}
+
+footer ul li{
+	display: inline-block;
+	/* float: left; */
+	margin-left: 10px;
+	border-left: 1px solid #000000;
+	padding-left:10px;
+}
+
+footer ul li:first-child{
+	border-left: none;
+}
+
+footer ul li a{
+	color: blue;
+	font-family: Times;
+	font-size: 20px;
+}
+
+footer .copyright{
+	color: #6f6d10;
+	margin-top: 5px;
+	font-size: 10pt;
+}
+
+/*formulaire*/
+#formulaire{
+	width: 980px;
+	background-color: #d6d3db;
+}
+
+fieldset, legend {
+	padding: 0;
+	margin: 0;
+}
+
+fieldset{
+	padding-left: 50px;
+}
+
+#formulaire
+#nom-enfant, #nom-parent, #nom-ecole, #courriel, #telephone {
+	width: 30%;
+}
+
+#age{
+	width: 5%;
+}
+
+#adresse{
+	resize: none;
+}
+
+#button{
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#server-reponse{
+	
+	width: 100%;
+	border: 5px outset red;
+  	background-color: rgba(149, 149, 149, 0.908);    
+	text-align: center;
+	padding: 50px 0;
+}
+
+.succes{
+	color: green;
+}
+
+.faild{
+	color:rgb(177, 51, 20);
+}
+
+.sport-resultats{
+	list-style: decimal;
+	margin-left: 30px;
+}
+.sport-resultats li{
+	padding: 5px;
+}
+
+.env-rank{
+	list-style: decimal;
+	margin-left: 30px;
+}
+.env-rank li{
+	padding: 5px;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th{
+	font-weight: bold;
+}
+
+tr, td{
+	width: 200px;
+	text-align: center;
+}
+
+table.center {
+	margin-left: auto; 
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
+.container-1{
+	display: flex;
+	margin-bottom: 25px;
+}
+.container-2{
+	display: flex;
+	margin-bottom: 25px;
+}
+.container-3{
+	display: flex;
+	margin-bottom: 25px;
+}
+.container-4{
+	display: flex;
+	margin-bottom: 25px;
+}
+.container-5{
+	display: flex;
+	margin-bottom: 25px;
+}
+.contact-container{
+	display: flex;
+	width: 100%;
+}
+
+.container-1 div, .container-2 div, .container-3 div, .container-4 div, .container-5 div{
+	border:1px #8d265a solid;
+	padding:10px;
+}
+.contact-2 h2, h3{
+	margin-bottom: 5px;
+}
+
+.box-1{
+	width: 400px;
+}
+
+.box-2{
+	width: 400px;
+}
+
+.img-repas{
+	width: 400px;
+	height: 250px;
+}
+
+.contact-1{
+	flex: 1;
+	order: 1;
+}
+.contact-2{
+	flex: 1;
+	order: 1;
+}
+
+strong {
+	font-weight: bold;
+}
+.error{
+	color: red;
+}
