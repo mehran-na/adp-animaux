@@ -1,56 +1,25 @@
 <?php
-	/*function avoideRepeter($rands, $value){
-		return array_search($value, $rands);
-	}*/
-	$arrFile = file("./animaux.csv");
-	/*echo '<pre>';
-	print_r($arrFile);
-	echo '<pre>';*/
+
+/*	$arrFile = file("./animaux.csv");
+
 	$animaux = array();
 	for ($i = 1 ; $i < count($arrFile) ; $i++) {
 		$animalArrInfo = explode(',', $arrFile[$i]);
 		array_push($animaux, $animalArrInfo);
 	}
-	/*echo '<pre>';
-	print_r($animaux);
-	echo '<pre>';*/
+
 	$rands = array();
 	for ($i = 1 ; $i <= 5 ; $i++) {
 		$value = rand(1, count($animaux) - 1);
 		array_push($rands, $value);
-		/*if($i = 0){
-			array_push($rand, $value);
-        }
-		if ($i > 0 && avoideRepeter($rands, $value)) {
-			$i--;
-		}else {
-		    echo $value;
-			array_push($rands, $value);
-		}*/
-		/*if (!avoideRepeter($rands, $value)) {
-			$i--;
-		}else {
-			echo $value;
-			//array_push($rands,$value);
-		}*/
 	}
-	/*echo '<pre>';
-	print_r($rands);
-	echo '<pre>';*/
 	$anim1 = $animaux[$rands[0]];
 	$anim2 = $animaux[$rands[1]];
 	$anim3 = $animaux[$rands[2]];
 	$anim4 = $animaux[$rands[3]];
-	$anim5 = $animaux[$rands[4]];
-	/*echo '<pre>';
-	print_r($anim1);
-	echo '<pre>';*/
-	/*foreach (file("./animaux.csv") as $line) {
-		$trimmedValue = trim($line); //string
-		echo "<li>{$trimmedValue}</li>";
-	}*/
+	$anim5 = $animaux[$rands[4]];*/
 ?>
-
+<?php include 'process.php'?>
 
 <!--Header-->
 <?php include 'header.php' ?>
@@ -97,13 +66,9 @@
                     : <?php echo "<a href = 'animalInfo.php?" . http_build_query($anim5) . "'>Click ici</a></p>"; ?>
             </div>
         </div>
-
     </div>
 
 </div>
 
 <!--footer-->
 <?php include 'footer.php' ?>
-</div>
-</body>
-</html>

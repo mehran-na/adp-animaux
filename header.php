@@ -1,3 +1,20 @@
+<?php include 'process.php' ?>
+<?php
+	//$animaux
+	//$_POST["chercherMot"]
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$resultats = array();
+		for ($i = 0 ; $i < count($animaux) ; $i++) {
+			for ($j = 0 ; $j < count($animaux[$i]) ; $j++) {
+				if ($animaux[$i][$j] == $_POST["chercherMot"]) {
+					array_push($resultats, $animaux[$i]);
+				}
+			}
+		}
+		header("Location: rechercheResultat.php?" . http_build_query($resultats), true, 303);
+	}
+?>
+
 <!DOCTYPE html>
 <html lang = "fr">
     <head>
@@ -5,7 +22,6 @@
         <meta name = "viewport" content = "width=device-width , inicial-scale=1">
         <meta name = "keywords" content = "sport,football,hocky,montreal, impact, nouvelles,français">
         <title>Adoption d'animaux</title>
-<!--        <link href = 'http://fonts.googleapis.com/css?family=Open+Sans' rel = 'stylesheet' type = 'text/css'>-->
         <link rel = "stylesheet" href = "Styles/reset.css">
         <link rel = "stylesheet" href = "Styles/pages.css">
     </head>
@@ -51,7 +67,7 @@
 
                     <form action = "#" method = "post" class = "form1">
                         <label for = "cherche"></label>
-                        <input type = "search" id = "cherche" placeholder="Cherch Animaux">
+                        <input type = "search" id = "cherche" placeholder = "Checher animal" name = "chercherMot">
                         <button class = "chercheBtn">Cherche</button>
                     </form>
                 </div>
