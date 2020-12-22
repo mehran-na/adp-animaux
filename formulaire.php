@@ -1,6 +1,6 @@
 <?php include 'header.php' ?>
 <div class = "page">
-    <form action = "form.php" method = "post" id="formulaire">
+    <form action = "formulaireActions.php" method = "post" id="formulaire">
         <div>
             <label for = "nom">Entrez le nom de l'animal : </label>
             <input type = "text" name = "nom" id = "nom">
@@ -23,8 +23,7 @@
             <br><br>
 
             <label for="desc">Entrez description de l'animal:</label><br>
-            <textarea id="desc" name="desc" rows="4" cols="50">
-            </textarea>
+            <textarea id="desc" name="desc" rows="4" cols="50"></textarea>
             <span style = "color:red" id = "error-desc"></span>
             <br><br>
 
@@ -34,8 +33,8 @@
             <br><br>
 
             <label for = "nom">Entrez votre adresse civique : </label>
-            <input type = "text" name = "adresse" id = "adresse">
-            <span style = "color:red" id = "error-adresse"></span>
+            <input type = "text" name = "adresse" id = "adresse-civique">
+            <span style = "color:red" id = "error-adresse-civique"></span>
             <br><br>
 
             <label for = "nom">Entrez votre ville : </label>
@@ -44,7 +43,7 @@
             <br><br>
 
             <label for = "nom">Entrez votre codepostal : </label>
-            <input type = "text" name = "codepostal" id = "codepostal">
+            <input type = "text" name = "cp" id = "codepostal">
             <span style = "color:red" id = "error-codepostal"></span>
             <br><br>
 

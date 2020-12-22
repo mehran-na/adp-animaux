@@ -1,85 +1,88 @@
-var form = document.querySelector("form");
+var form = document.querySelector("#formulaire");
+
 form.addEventListener('submit', function(event){
 	if(!checkRequiredFields()){
 		event.preventDefault();
+		console.log("Mehran");
 	}
 })
 
 
 // paak kardane span haaye error
 function clearErrorMessages(){
-	document.getElementById("error_lname").innerHTML = "";
-	document.getElementById("error_fname").innerHTML = "";
-	document.getElementById("error-radio").innerHTML = "";
-	document.getElementById("error-checkBox").innerHTML = "";
-	document.getElementById("error-nombre").innerHTML = "";
-	document.getElementById("error-select").innerHTML = "";
+	document.getElementById("error_nom").innerHTML = "";
+	document.getElementById("error_type").innerHTML = "";
+	document.getElementById("error_race").innerHTML = "";
+	document.getElementById("error-age").innerHTML = "";
+	document.getElementById("error-desc").innerHTML = "";
+	document.getElementById("error-courriel").innerHTML = "";
+	document.getElementById("error-adresse-civique").innerHTML = "";
+	document.getElementById("error-ville").innerHTML = "";
+	document.getElementById("error-codepostal").innerHTML = "";
 }
 
-//TextBox validation :
+//TextBox validation pour vide et virgule :
 function validateInputField(inputId, spanId){
 	var value = document.getElementById(inputId).value;
-	if(value == null || value === ""){
-		document.getElementById(spanId).innerHTML = "Ce champ doit contenir une valeur!";
+	if(value === null || value === ""){
+		document.getElementById(spanId).innerHTML = "Ce champ doit contenir une valeur !";
+		return false;
+	}
+	if(value.includes(",")){
+		document.getElementById(spanId).innerHTML = "Ce champ ne peut pas avoir la virgule !";
 		return false;
 	}
 	return true;
 }
 
-//RadioButton validation
-function validationRadio(){
-	/*var red = document.getElementById("red");
-	var blue = document.getElementById("blue");
-	if (!red.checked && !blue.checked) {
-	  document.getElementById("error-radio").innerHTML = "il faut check radio button !";
-	  return false;
-	}
-	return true;*/
-	var radioButtonsAcces = document.querySelectorAll("input[name='colors']");
-	var counter = 0;
-	radioButtonsAcces.forEach(function(item){
-		if(item.checked){
-			counter++;
-		}
-	});
-	if(counter === 0){
-		document.getElementById("error-radio").innerHTML = "il faut check radio button !";
-		return false;
-	}
-	return true;
-}
-
-//CheckBox validation :
-function validationCheckBox(){
-	var checkBoxAcces = document.querySelectorAll("input[type=checkbox]");
-	var counter = 0;
-	checkBoxAcces.forEach(function(item){
-		if(item.checked){
-			counter++;
-		}
-	})
-	if(counter === 0){
-		document.getElementById("error-checkBox").innerHTML = "il faut check checkbox !";
+//Validation pour caracter entre 3 et 20 :
+function validationNoCaracter(inputId, spanId){
+	var value = document.getElementById(inputId).value;
+	if (value.length < 3 && value.length > 20){
+		document.getElementById(spanId).innerHTML = "Ce champ doit avoir entre 3 et 20 caractères !";
 		return false;
 	}
 	return true;
 }
 
 //Number validation :
-function validationNombre(nombreId, spanId){
-	var value = document.getElementById(nombreId).value;
-	if(value === "" || value < 0 || value > 5){
-		document.getElementById(spanId).innerHTML = "Ce champ doit doit avoir un nombre entre 0 et 5!";
+function validationAge(inputId, spanId){
+	var value = document.getElementById(inputId).value;
+	if(value === "" || value < 0 || value > 30){
+		document.getElementById(spanId).innerHTML = "Age doit avoir un nombre entre 0 et 30 !";
 		return false;
 	}
 	return true;
 }
 
-//SelectBox validation :
-function validationSelects(selectId, spanId){
-	var value = document.getElementById(selectId).value;
+function validationDesc(inputId, spanId){
+	var value = document.getElementById(inputId).value;
 	if(value === null || value === ""){
-		document.getElementById(spanId).innerHTML = "Vous devez choisir une auto !";
+		document.getElementById(spanId).innerHTML = "Ce champ doit contenir une valeur !";
+		return false;
+	}
+	if(value.includes(",")){
+		document.getElementById(spanId).innerHTML = "Ce champ ne peut pas avoir la virgule !";
+		return false;
+	}
+	return true;
+}
+
+function validationCourriel(inputId, spanId){
+	var value = document.getElementById(inputId).value;
+	var regex = /\w+@\w+\.\w+/i;
+	if (!regex.test(value)) {
+		document.getElementById(spanId).innerHTML = "Votre courriel n'est pas valide !";
+		return false;
+	}
+	return true;
+}
+
+function validationCodePostal(inputId, spanId){
+	var value = document.getElementById(inputId).value;
+	var regex = /[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d/i;
+	if (!regex.test(value)) {
+		document.getElementById(spanId).innerHTML = "Votre code postal n'est pas valide !";
 		return false;
 	}
 	return true;
@@ -87,15 +90,18 @@ function validationSelects(selectId, spanId){
 
 // vaghty submit misheh :
 function checkRequiredFields(){
+	
 	clearErrorMessages();
-	//validations :
-	var fieldNom = validateInputField("nom", "error_lname");
-	var fieldPrenom = validateInputField("prenom", "error_fname");
-	var radios = validationRadio();
-	var checkBox = validationCheckBox();
-	var nombre = validationNombre("quantity", "error-nombre");
-	var selects = validationSelects("cars", "error-select");
 
-	// agar true return beshe form submit misheh
-	return fieldNom && fieldPrenom && radios && checkBox && nombre;
+	var fieldNom = validateInputField("nom", "error_nom") && validationNoCaracter("nom", "error_nom");
+	var fieldType = validateInputField("type", "error_type");
+	var fieldRace = validateInputField("race", "error_race");
+	var fieldAge = validationAge("age", "error-age");
+	var fieldDescription = validationDesc("desc", "error-desc");
+	var fieldCourriel = validateInputField("courriel", "error-courriel") && validationCourriel("courriel", "error-courriel");
+	var fieldAddCivique = validateInputField("adresse-civique", "error-adresse-civique");
+	var fieldAddVille = validateInputField("ville", "error-ville");
+	var fieldAddCodepostal = validateInputField("codepostal", "error-codepostal") && validationCodePostal("codepostal", "error-codepostal");
+
+	return (fieldNom && fieldType && fieldRace && fieldAge && fieldDescription && fieldCourriel && fieldAddCivique && fieldAddVille && fieldAddCodepostal);
 }
