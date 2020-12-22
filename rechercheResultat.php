@@ -19,10 +19,15 @@
         <?php if($errorMessage == "" ){ ?>
 	    <?php foreach ($animauxTrouver as $animal){ ?>
         <div class = "bo-1">
-                <h3><?php echo "nom est : " . $animal[1]; ?></h3>
-                <p><?php echo "Description : " . $animal[5]; ?></p>
-                <p>Pour plus informations veuillez voire ma page
-                : <?php echo "<a href = 'animalInfo.php?" . http_build_query($animal) . "'>Click ici</a></p>"; ?>
+            <ul>
+                <li><?php echo "<strong>Nom :</strong>" . $animal[1]; ?></li>
+                <li><?php echo "<strong>Type :</strong>" . $animal[2]; ?></li>
+                <br>
+                <li>
+                    Pour plus informations veuillez voire ma page
+                    : <?php echo "<a href = 'animalInfo.php?" . http_build_query($animal) . "'>Click ici</a></p>"; ?>
+                </li>
+            </ul>
         </div>
 	    <?php }}else{echo $errorMessage;} ?>
     </div>

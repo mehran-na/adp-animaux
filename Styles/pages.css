@@ -134,9 +134,10 @@ img{
 }
 
 .page{
-	
+	background-color: #d6d3db;
 	width: 980px;
 	margin: 0 auto 0;
+	height: 100%;
 }
 
 .page .post{
@@ -261,9 +262,9 @@ fieldset{
 
 #server-reponse{
 	
-	width: 100%;
+	width: 99%;
 	border: 5px outset red;
-  	background-color: rgba(149, 149, 149, 0.908);    
+  	background-color: #d6d3db;
 	text-align: center;
 	padding: 50px 0;
 }
@@ -354,18 +355,18 @@ table.center {
 
 .container-a{
 	display: flex;
-	margin-bottom: 25px;
-	margin-top: 25px;
+	padding-bottom: 25px;
+	padding-top: 25px;
 	justify-content: center;
 }
 .container-b{
 	display: flex;
-	margin-bottom: 25px;
+	padding-bottom: 25px;
 	justify-content: space-evenly;
 }
 .container-c{
 	display: flex;
-	margin-bottom: 25px;
+	padding-bottom: 25px;
 	justify-content: space-evenly;
 }
 
