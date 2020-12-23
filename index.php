@@ -19,7 +19,6 @@
 	$anim4 = $animaux[$rands[3]];
 	$anim5 = $animaux[$rands[4]];*/
 ?>
-<?php include 'process.php'?>
 
 <!--Header-->
 <?php include 'header.php' ?>

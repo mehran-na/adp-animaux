@@ -1,12 +1,25 @@
 <?php
 
 	$arrFile = file("./animaux.csv");
-
 	$animaux = array();
-	for ($i = 1 ; $i < count($arrFile) ; $i++) {
-		$animalArrInfo = explode(',', $arrFile[$i]);
-		array_push($animaux, $animalArrInfo);
+	$file = fopen('animaux.csv', "rb");
+	$counter = 0;
+	while (!feof($file)) {
+		$animal = fgetcsv($file);
+		if($animal == false || $counter == 0){ //empty
+			$counter++;
+			continue;
+		}else{
+			$counter++;
+			if (count($animal) == 10) {
+				array_push($animaux, $animal);
+			}
+		}
 	}
+	/*echo '<pre>';
+	echo 'animaux = ';
+	print_r($animaux);
+	echo '<pre>';*/
 
 	$rands = array();
 	for ($i = 1 ; $i <= 5 ; $i++) {
