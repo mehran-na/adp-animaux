@@ -1,7 +1,5 @@
 <?php include 'process.php' ?>
 <?php
-	//$animaux
-	//$_POST["chercherMot"]
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$resultats = array();
 		for ($i = 0 ; $i < count($animaux) ; $i++) {
@@ -44,12 +42,6 @@
                     <div class = "logo">
                         <a href = "index.php"><img src = "Images/pet-logo.png" alt = "Logo"></a>
                     </div>
-                    <!--boite de recherche-->
-                    <!--<div class = "search">
-                        <label for = "chercher"></label>
-                        <input type = "text" name = "search-input" placeholder = "Chercher..." id = "chercher">
-                        <a href = "#" class = "search-btn"></a>
-                    </div>-->
                 </div>
                 <!--menu-->
                 <div class = "top-menu">
@@ -57,10 +49,6 @@
                         <ul>
                             <li><a href = "index.php">Accueil</a></li>
                             <li><a href = "formulaire.php">Formulaire</a>
-                            <li><a href = "rechercheResultat.php">Recherch Resultat</a>
-                            <li><a href = "animalInfo.php">Animal info</a>
-                            <li><a href = "confirmation.php">Confirmation</a>
-
                             <li>
                         </ul>
                     </nav>

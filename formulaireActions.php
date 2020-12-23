@@ -1,5 +1,6 @@
 <?php
 	include 'process.php';
+	$succes = false;
 	if (isset($_POST)) {
 		$nom = $_POST["nom"];
 		$type = $_POST["type"];
@@ -11,26 +12,23 @@
 		$ville = $_POST["ville"];
 		$codepostal = $_POST["nom"];
 
-		$lastId = $animaux[count($animaux)-1][0];
-		$lastIdArr = str_split($lastId);
-		$LastDigitStr = "";
-		for ($i = 1; $i < count($lastIdArr) ; $i++){
-		    $LastDigitStr .= $lastIdArr[$i];
-		}
-		$newIdNumber = (int) $LastDigitStr + 1;
-		$newId = "X".strval($newIdNumber);
-
-		$donnees = array();
 		if (!empty($nom) && !empty($type) && !empty($race) && !empty($age) && !empty($description) && !empty($courriel) && !empty($adresse) && !empty($ville) && !empty($codepostal)) {
-			array_push($donnees, $newId, $nom,$type,$race,$age,$description,$courriel,$adresse,$ville,$codepostal);
+			$lastId = $animaux[count($animaux) - 1][0];
+			$lastIdArr = str_split($lastId);
+			$LastDigitStr = "";
+			for ($i = 1 ; $i < count($lastIdArr) ; $i++) {
+				$LastDigitStr .= $lastIdArr[$i];
+			}
+			$newIdNumber = (int)$LastDigitStr + 1;
+			$newId = "X" . strval($newIdNumber);
+			$donnees = array();
+			array_push($donnees, $newId, $nom, $type, $race, $age, $description, $courriel, $adresse, $ville,
+				$codepostal);
 			$file = fopen("animaux.csv", "a");
 			fputcsv($file, $donnees);
 			fclose($file);
+			$succes = true;
 		}
 	}
-
-
-
-
-
+	header("Location: confirmation.php?succes={$succes}" , true, 303);
 ?>
