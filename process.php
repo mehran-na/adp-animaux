@@ -21,11 +21,30 @@
 	print_r($animaux);
 	echo '<pre>';*/
 
+	//Random animal not repeating :
 	$rands = array();
-	for ($i = 1 ; $i <= 5 ; $i++) {
-		$value = rand(1, count($animaux) - 1);
-		array_push($rands, $value);
+	$unique = true;
+	while (count($rands) != 5) {
+		$value = rand(0, count($animaux)-1);
+		if(count($rands) == 0){
+			array_push($rands, $value);
+		}else{
+			$test = false;
+			foreach ($rands as $item){
+				if ($value == $item) {
+					$test = true;
+				    break;
+				}
+			}
+			if(!$test){
+				array_push($rands, $value);
+			}
+		}
 	}
+	/*echo '<pre>';
+	print_r($rands);
+	echo '<pre>';*/
+	
 	$anim1 = $animaux[$rands[0]];
 	$anim2 = $animaux[$rands[1]];
 	$anim3 = $animaux[$rands[2]];
