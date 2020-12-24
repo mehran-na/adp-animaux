@@ -1,14 +1,19 @@
 <?php include 'process.php' ?>
 <?php
+    /*
+     * Moteur de recherche :
+     * */
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$resultats = array();
 		for ($i = 0 ; $i < count($animaux) ; $i++) {
 			for ($j = 0 ; $j < count($animaux[$i]) ; $j++) {
-				if ($animaux[$i][$j] == $_POST["chercherMot"]) {
+				if ($animaux[$i][$j] == trim($_POST["chercherMot"])) {
 					array_push($resultats, $animaux[$i]);
 				}
 			}
 		}
+
+		//Redirect au ficher "rechercheResultat.php" avec les résultat
 		header("Location: rechercheResultat.php?" . http_build_query($resultats), true, 303);
 	}
 ?>

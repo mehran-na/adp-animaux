@@ -1,4 +1,7 @@
 <?php
+    /*
+     * Recevoir les résultat du recherch et afficher
+     * */
     $errorMessage = "";
 	if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET)) {
 		$animauxTrouver = array();
@@ -6,7 +9,7 @@
 			array_push($animauxTrouver, $item);
 		}
 	}else {
-		$errorMessage = "Aucun résultat trouvé - respecter les majuscule et minuscule ";
+		$errorMessage = "Aucun résultat trouvé - Respecter les majuscule et minuscule ";
 	}
 ?>
 

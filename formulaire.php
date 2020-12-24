@@ -18,7 +18,7 @@
             <br><br>
 
             <label for = "quantity">Entrez l'age de l'animal :</label>
-            <input type = "number" id = "age" name = "age" min = "1" max = "30"><br>
+            <input type = "number" id = "age" name = "age" min = "1" max = "30">
             <span style = "color:red" id = "error-age"></span>
             <br><br>
 

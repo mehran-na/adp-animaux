@@ -1,6 +1,22 @@
 <?php
+	/*
+	 * Supprimer les lignes vide du fichier "animaux.csv"
+	 **/
+	$contents = file_get_contents('animaux.csv');
+	$contents = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "\n", $contents);
 
-	$arrFile = file("./animaux.csv");
+	/*
+	 * Ajouter une ligne vide à la fin de fichier "animaux.csv"
+	 * (preparer pour la prochain animal pour ajouter dans le ficher)
+	 * */
+	if (substr($contents, -1) != "\n") {
+	    $contents .= "\n";
+	}
+
+	/*
+	 * Lire le fichier "animaux.csv" et preparer un tableau des animaux
+	 * */
+	file_put_contents('animaux.csv', $contents);
 	$animaux = array();
 	$file = fopen('animaux.csv', "rb");
 	$counter = 0;
@@ -16,12 +32,10 @@
 			}
 		}
 	}
-	/*echo '<pre>';
-	echo 'animaux = ';
-	print_r($animaux);
-	echo '<pre>';*/
 
-	//Random animal not repeating :
+	/*
+	 * algorithm pour choisir 5 animaux par hasard sans répétition
+	 * */
 	$rands = array();
 	$unique = true;
 	while (count($rands) != 5) {
@@ -41,10 +55,9 @@
 			}
 		}
 	}
-	/*echo '<pre>';
-	print_r($rands);
-	echo '<pre>';*/
-	
+	/*
+	 * 5 animaux pour afficher sur accueil
+	 * */
 	$anim1 = $animaux[$rands[0]];
 	$anim2 = $animaux[$rands[1]];
 	$anim3 = $animaux[$rands[2]];

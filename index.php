@@ -3,9 +3,6 @@
 
 <!--body de la page-->
 <div class = "page">
-
-<!--    <div class = "post">-->
-
         <div class = "container-a">
             <div class = "bo-head">
                 <ul>
@@ -69,8 +66,6 @@
             </div>
         </div>
     </div>
-
-<!--</div>-->
 
 <!--footer-->
 <?php include 'footer.php' ?>
