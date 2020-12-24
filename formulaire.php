@@ -45,7 +45,7 @@
             <label for = "nom">Entrez votre codepostal : </label>
             <input type = "text" name = "cp" id = "codepostal">
             <span style = "color:red" id = "error-codepostal"></span>
-            <br><br>
+            <br><br><br>
 
             <input type = "submit" value = "Envoyer">
         </div>

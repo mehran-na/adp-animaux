@@ -6,7 +6,7 @@
 			array_push($animauxTrouver, $item);
 		}
 	}else {
-		$errorMessage = "Acune Resultat";
+		$errorMessage = "Aucun résultat trouvé - respecter les majuscule et minuscule ";
 	}
 ?>
 
@@ -15,10 +15,10 @@
 
 <!--body-->
 <div class = "page">
-    <div class = "container-b">
+    <div class = "container-result">
         <?php if($errorMessage == "" ){ ?>
 	    <?php foreach ($animauxTrouver as $animal){ ?>
-        <div class = "bo-1">
+        <div class = "bo-result">
             <ul>
                 <li><?php echo "<strong>Nom :</strong>" . $animal[1]; ?></li>
                 <li><?php echo "<strong>Type :</strong>" . $animal[2]; ?></li>

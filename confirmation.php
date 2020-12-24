@@ -3,9 +3,9 @@
 <!-- Site Body -->
 <div id = "server-reponse">
     <?php if($_GET["succes"]){ ?>
-    <h4>Vos Commandes ont enregistrer avec succées</h4>
+    <h4>Votre animal a enregistré avec succée</h4>
     <?php }else{ ?>
-    <h4>Error</h4>
+    <h4>Erreur d'enregistrement</h4>
 	<?php }?>
 </div>
 <!--footer-->

@@ -232,6 +232,12 @@ footer .copyright{
 	background-color: #d6d3db;
 }
 
+#formulaire div{
+	margin-left: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
 fieldset, legend {
 	padding: 0;
 	margin: 0;
@@ -387,6 +393,26 @@ table.center {
 	width: 400px;
 	margin-left: 50px;
 }
+
+.container-result{
+	display: flex;
+	padding-bottom: 25px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding-top: 25px;
+}
+
+.container-result div{
+	border:1px #8d265a solid;
+	padding:10px;
+}
+
+.bo-result{
+	width: 400px;
+	/*margin-left: 25px;*/
+	margin-bottom: 25px;
+}
+
 .img-repas{
 	width: 400px;
 	height: 250px;
