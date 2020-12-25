@@ -67,7 +67,7 @@ function validationCourriel(inputId, spanId){
 //Validation code postal avec Regex
 function validationCodePostal(inputId, spanId){
 	var value = document.getElementById(inputId).value;
-	var regex = /[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d/i;
+	var regex = /^[A-Za-z]\d[A-Za-z]\s?\d[A-Za-z]\d$/i;
 	if (!regex.test(value)) {
 		document.getElementById(spanId).innerHTML = "Votre code postal n'est pas valide !";
 		return false;
